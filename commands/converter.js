@@ -40,7 +40,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "quotely",
+            pattern: "اكتب",
             desc: "Makes Sticker of quoted text.",
             alias: ["q"],
             category: "converter",
@@ -48,7 +48,7 @@ cmd({
             filename: __filename
         },
         async(Void, citel, text) => {
-            if (!citel.quoted) return citel.reply("Please quote/reply to any message");
+            if (!citel.quoted) return citel.reply("سوي ريبل على رساله واكتب الامر");
             let textt = citel.quoted.text;
             let pfp;
             try {
@@ -94,7 +94,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "fancy",
+            pattern: "زخرفة",
             desc: "Makes stylish/fancy given text",
             category: "converter",
             use: '56 Secktor',
@@ -104,7 +104,7 @@ cmd({
         async(Void, citel, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\nExample: .fancy 32 Secktor\n\n"
+                    "Fancy text generator\n\nمثال: .زخرفة 32 raizel\n\n"
                 );
                 listall("Secktor Bot").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
@@ -119,7 +119,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "tiny",
+            pattern: "اختصار",
             desc: "Makes url tiny.",
             category: "converter",
             use: '<url>',
@@ -127,11 +127,11 @@ cmd({
             filename: __filename
         },
         async(Void, citel, text) => {
-            if (!text) return citel.reply('Provide me a link')
+            if (!text) return citel.reply('ارسل الرابط لتقصيره')
             try {
                 link = text.split(" ")[0];
                 anu = await axios.get(`https://tinyurl.com/api-create.php?url=${link}`);
-                citel.reply(`*🛡️Your Shortened URL*\n\n${anu.data}`);
+                citel.reply(`*خذ رابطك المقصر*\n\n${anu.data}`);
             } catch (e) {
                 console.log(e);
             }
@@ -139,14 +139,14 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-        pattern: "toaudio",
+        pattern: "لصوتي",
         desc: "changes type to audio.",
         category: "converter",
         use: '<reply to any audio>',
         filename: __filename
     },
     async(Void, citel, text) => {
-        if (!citel.quoted) return citel.reply('_Need Media._')
+        if (!citel.quoted) return citel.reply('_وين الرسابط._')
         let mime = citel.quoted.mtype
         let media = await Void.downloadAndSaveMediaMessage(citel.quoted);
         const { toAudio } = require('../lib')

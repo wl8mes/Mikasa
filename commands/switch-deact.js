@@ -14,9 +14,7 @@
  
      //---------------------------------------------------------------------------
  cmd({
-         pattern: "deact",
-         desc: "Switches for varios works.",
-         category: "group",
+         pattern: "عطل",
          filename: __filename
      },
      async(Void, citel, text,{ isCreator }) => {
@@ -27,9 +25,9 @@
          const isBotAdmins = citel.isGroup ? groupAdmins.includes(botNumber) : false;
          const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
          //-----------------------------------------  
-         if (!citel.isGroup) return citel.reply("This feature in only for Group.")
-         if (!text) return citel.reply(`❌ Please provide me term like like\n1-events\n2-antilink\n3-nsfw\n4-cardgame\n5-bot`)
-         if (!isAdmins) return citel.reply("❌ This Command is only for Admin")
+         if (!citel.isGroup) return citel.reply("هذا الامر خاص بالقروب")
+         if (!text) return citel.reply(`اختر وش تبي تعطل\n1-الاحداث\n2-البنك\n3-مضاد_روابط`)
+         if (!isAdmins) return citel.reply("هذا الامر خاص بالمشرفين")
          switch (text.split(" ")[0]) {
             case 'antilink':
                 {
@@ -37,76 +35,47 @@
                     if (!checkgroup) {
                         await new sck({ id: citel.chat, antilink: "false" })
                             .save()
-                        return citel.reply(' Antilink disabled Successfully')
+                        return citel.reply('تم تعطيل مضاد الروابط')
                     } else {
-                        if (checkgroup.antilink == "false") return citel.reply("Antilink was alredy disabled.")
+                        if (checkgroup.antilink == "false") return citel.reply("معطل مسبقا")
                         await sck.updateOne({ id: citel.chat }, { antilink: "false" })
-                        citel.reply('disabled antilink in current chat.')
+                        citel.reply('تم تعطيل مضاد الروابط')
                         return
                     }
                 }
                 break
-                       case 'economy':
+                       case 'البنك':
                 {
                     let checkgroup = await sck.findOne({ id: citel.chat })
                     if (!checkgroup) {
                         await new sck({ id: citel.chat, economy: "false" })
                             .save()
-                        return citel.reply(' Economy disabled Successfully')
+                        return citel.reply('تم تعطيل البنك')
                     } else {
-                        if (checkgroup.economy == "false") return citel.reply("Economy was alredy disabled.")
+                        if (checkgroup.economy == "false") return citel.reply("معطل مسبقا")
                         await sck.updateOne({ id: citel.chat }, { economy: "false" })
-                        citel.reply('disabled Economy in current chat.')
+                        citel.reply('تم تعطيل البنك')
                         return
                     }
                 }
                 break
-                case 'events':
+                case 'الاحداث':
                     {
                         let checkgroup = await sck.findOne({ id: citel.chat })
                         if (!checkgroup) {
                             await new sck({ id: citel.chat, events: "false" })
                                 .save()
-                            return citel.reply("Successfully disabled *Events*")
+                            return citel.reply("تم تعطيل الاحداث")
                         } else {
-                            if (checkgroup.events == "false") return citel.reply("*Events* are already disabled")
+                            if (checkgroup.events == "false") return citel.reply("معطل مسبقا")
                             await sck.updateOne({ id: citel.chat }, { events: "false" })
-                            return citel.reply("Successfully disabled *Events*")
-                        }
-                    }
-                    break
-                case 'cardgame':
-                    {
-                        let checkgroup = sck.findOne({ id: citel.chat })
-                        if (!checkgroup) {
-                            await new sck({ id: citel.chat, cardgame: "deactive" })
-                                .save()
-                            return citel.reply("Successfully disabled *Card Game*")
-                        } else {
-                            if (checkgroup.cardgame == "deactive") return citel.reply("*Card Game* was already disabled")
-                            await sck.updateOne({ id: citel.chat }, { cardgame: "deactive" })
-                            return citel.reply("Successfully disabled *Card Game.*")
-                        }
-                    }
-                    break
-                case 'nsfw':
-                    {
-                        let checkgroup = await sck.findOne({ id: citel.chat })
-                        if (!checkgroup) {
-                            await new sck({ id: citel.chat, nsfw: "false" })
-                                .save()
-                            return citel.reply("Successfully disabled *NSFW*")
-                        } else {
-                            if (checkgroup.nsfw == "false") return citel.reply("*NSFW* is already disabled")
-                            await sck.updateOne({ id: citel.chat }, { nsfw: "false" })
-                            citel.reply("Successfully disabled *NSFW*")
-                            return
+                            return citel.reply("تم تعطيل الاحداث")
                         }
                     }
                     break
                 default:
                     {
-                        citel.reply("Please provide me term like.\n1-events\n2-antilink\n3-nsfw\n4-cardgame")
+                        citel.reply("اختر وش تبي تعطل\n1-الاحداث\n2-البنك\n3-مضاد_روابط")
                     }
          }
      }

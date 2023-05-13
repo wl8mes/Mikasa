@@ -16,7 +16,7 @@ const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter")
  const axios = require('axios')
   //---------------------------------------------------------------------------
  cmd({
-    pattern: "setwelcome",
+    pattern: "الترحيب",
     desc: "sets welcome message in specific group.",
     category: "misc",
 },
@@ -35,7 +35,7 @@ async(Void, citel, text,{ isCreator }) => {
 )
  //---------------------------------------------------------------------------
 cmd({
-    pattern: "setgoodbye",
+    pattern: "التوديع",
     desc: "sets goodbye message in specific group.",
     category: "misc",
 },
@@ -508,7 +508,7 @@ let buttons = [{
          
      //---------------------------------------------------------------------------
  cmd({
-             pattern: "antilink",
+             pattern: "الروابط",
              desc: "activates and deactivates antilink.\nuse buttons to toggle.",
              category: "group",
              filename: __filename,
@@ -524,19 +524,19 @@ let buttons = [{
              let buttons = [{
                      buttonId: `${prefix}act antilink`,
                      buttonText: {
-                         displayText: "Turn On",
+                         displayText: "شغل",
                      },
                      type: 1,
                  },
                  {
                      buttonId: `${prefix}deact antilink`,
                      buttonText: {
-                         displayText: "Turn Off",
+                         displayText: "غلق",
                      },
                      type: 1,
                  },
              ];
-             await Void.sendButtonText(citel.chat, buttons, `Activate antilink:Deletes Link + kick`, Void.user.name, citel);
+             await Void.sendButtonText(citel.chat, buttons, `حذف الرابط وطرد اللي ارسل`, Void.user.name, citel);
          }
      )
      //---------------------------------------------------------------------------

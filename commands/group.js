@@ -16,7 +16,7 @@ const Levels = require("discord-xp");
 const { Sticker, createSticker, StickerTypes } = require("wa-sticker-formatter");
 //---------------------------------------------------------------------------
 cmd({
-            pattern: "join",
+            pattern: "انضم",
             desc: "joins group by link",
             category: "owner",
             use: '<group link.>',
@@ -28,7 +28,7 @@ cmd({
                 citel.reply("Link Invalid, Please Send a valid whatsapp Group Link!");
             let result = text.split(" ")[0].split("https://chat.whatsapp.com/")[1];
             await Void.groupAcceptInvite(result)
-                .then((res) => citel.reply("🟩Joined Group"))
+                .then((res) => citel.reply("🟩تم دخلت"))
                 .catch((err) => citel.reply("Error in Joining Group"));
 
         }
@@ -48,7 +48,7 @@ cmd({
             author = Config.author
             if (citel.quoted) {
                 let media = await citel.quoted.download();
-                citel.reply("*Processing Your request*");
+                citel.reply("*جاري صناعة الملصق*");
                 let sticker = new Sticker(media, {
                     pack: pack, // The pack name
                     author: author, // The author name
@@ -91,7 +91,7 @@ cmd({
         citel.reply(`*❀╎رسلت لك للــخاص ${tlang().greet}*`);
         await Void.sendMessage(`${citel.sender}`, {
             image: log0,
-            caption: `*جروب دعم بوت رايزل*\n*الرابط:* https://chat.whatsapp.com/EZe0MlgU0xo8GXtkCpqS0M`,
+            caption: `*جروب دعم بوت زيرو تو*\n*الرابط:* https://chat.whatsapp.com/LAASmxox5c75HILkYXe2AX `,
         });
 
     }
@@ -99,7 +99,7 @@ cmd({
 
 //---------------------------------------------------------------------------
 cmd({
-            pattern: "انذار",
+            pattern: "warn",
             desc: "Warns user in Group.",
             category: "group",
             filename: __filename,
@@ -110,7 +110,7 @@ cmd({
             const groupAdmins = await getAdmin(Void, citel)
             const isAdmins = citel.isGroup ? groupAdmins.includes(citel.sender) : false;
             if (!isAdmins) return citel.reply('This command is only for Admin.')
- const S=m;function Z(){const F=['126402oKAcRa','date','Removing\x20User\x20because\x20Warn\x20limit\x20exceeded\x0a\x0a*All\x20Warnings.*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','│\x20*🔰Time:-*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a╭─────────────◆\x0a│\x20*🍁In\x20Group:-*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','*----Warn----*\x0aUser:\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*There\x20are\x20total\x20','split','│\x20*⚠️Warned\x20by:-*\x20','length','sender','setDefault','group','Asia/KOLKATA','../config','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('Please\x20quote\x20a\x20user\x20master.');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0aWith\x20Reason:\x20'+text+'\x0aWarned\x20by:\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const Config=require(S(0x1ff));if(h[S(0x1fa)]>Config['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings.*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='│\x20_📍Reason:\x20'+h[i][S(0x1ee)]+'_\x0a╰─────────────◆\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
+ const S=m;function Z(){const F=['126402oKAcRa','date','Removing\x20User\x20because\x20Warn\x20limit\x20exceeded\x0a\x0a*All\x20Warnings.*\x0a','chat','8qachoN','580yXDZAo','groupParticipantsUpdate','114528WgITIL','reply','groupMetadata','│\x20*🔰Time:-*\x20','find','locale','log','196311jXGmuc','quoted','save','*\x0a╭─────────────◆\x0a│\x20*🍁In\x20Group:-*\x20','759700KYdstU','warnedby','pushName','reason','8dUtMfa','2BlOCqD','550MdvhLT','*----انذار----*\x0aUser:\x20@','54828ViphBF','subject','1100323uEahgH','30204512uUuJcj','*There\x20are\x20total\x20','split','│\x20*⚠️Warned\x20by:-*\x20','length','sender','setDefault','group','Asia/KOLKATA','../config','215XZLRSE','HH:mm:ss','warn','remove'];Z=function(){return F;};return Z();}(function(U,w){const c=m,s=U();while(!![]){try{const q=parseInt(c(0x1eb))/0x1*(parseInt(c(0x1f0))/0x2)+parseInt(c(0x1e7))/0x3*(parseInt(c(0x1ef))/0x4)+-parseInt(c(0x200))/0x5*(-parseInt(c(0x204))/0x6)+-parseInt(c(0x1f5))/0x7*(-parseInt(c(0x1dd))/0x8)+-parseInt(c(0x1f3))/0x9*(-parseInt(c(0x1de))/0xa)+parseInt(c(0x1f1))/0xb*(parseInt(c(0x1e0))/0xc)+-parseInt(c(0x1f6))/0xd;if(q===w)break;else s['push'](s['shift']());}catch(B){s['push'](s['shift']());}}}(Z,0x707d4));function m(Y,U){const w=Z();return m=function(s,q){s=s-0x1dd;let B=w[s];return B;},m(Y,U);}if(!citel['quoted'])return citel[S(0x1e1)]('Please\x20quote\x20a\x20user\x20master.');const timesam=moment(moment())['format'](S(0x201));moment['tz'][S(0x1fc)](S(0x1fe))[S(0x1e5)]('id');try{let metadata=await Void[S(0x1e2)](citel[S(0x207)]);await new warndb({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202),'reason':text,'group':metadata[S(0x1f4)],'warnedby':citel[S(0x1ed)],'date':timesam})[S(0x1e9)]();let ment=citel[S(0x1e8)][S(0x1fb)];Void['sendMessage'](citel['chat'],{'text':S(0x1f2)+citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+'\x0aWith\x20Reason:\x20'+text+'\x0aWarned\x20by:\x20'+citel[S(0x1ed)],'mentions':[citel[S(0x1e8)][S(0x1fb)]]},{'quoted':citel});let h=await warndb[S(0x1e4)]({'id':citel['quoted'][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});const Config=require(S(0x1ff));if(h[S(0x1fa)]>Config['warncount']){teskd=S(0x206);let h=await warndb[S(0x1e4)]({'id':citel[S(0x1e8)][S(0x1fb)][S(0x1f8)]('@')[0x0]+S(0x202)});teskd+=S(0x1f7)+h[S(0x1fa)]+'\x20\x20warnings.*\x0a';for(let i=0x0;i<h[S(0x1fa)];i++){teskd+='*'+(i+0x1)+S(0x1ea)+h[i][S(0x1fd)]+'\x0a',teskd+=S(0x1e3)+h[i][S(0x205)]+'\x0a',teskd+=S(0x1f9)+h[i][S(0x1ec)]+'\x0a',teskd+='│\x20_📍Reason:\x20'+h[i][S(0x1ee)]+'_\x0a╰─────────────◆\x0a\x0a';}citel[S(0x1e1)](teskd),await Void[S(0x1df)](citel['chat'],[citel['quoted'][S(0x1fb)]],S(0x203));}}catch(Y){console[S(0x1e6)](Y);}
             
         }
     )
@@ -168,13 +168,13 @@ cmd({
         if (!isAdmins) return citel.reply(tlang().admin);
 
         let textt = `
-══✪*｢✪منشن جماعي✪｣*✪══
+══✪｢منشن جماعي ｣✪══
 
 ✪ *الرساله :* ${text ? text : "اعيدت"}\n\n
 ✪ *الطالب:* ${citel.pushName} 🔖
 `
         for (let mem of participants) {
-            textt += `📍 @${mem.id.split("@")[0]}\n`;
+            textt += `🐥 @${mem.id.split("@")[0]}\n`;
         }
         Void.sendMessage(citel.chat, {
             text: textt,
@@ -286,7 +286,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "profile",
+            pattern: "بروفايل",
             desc: "Shows profile of user.",
             category: "group",
             filename: __filename,
@@ -297,19 +297,19 @@ cmd({
             let meh = citel.sender;
             const userq = await Levels.fetch(citel.sender, "RandomXP");
             const lvpoints = userq.level;
-            var role = "GOD✨";
+            var role = "ملك✨";
             if (lvpoints <= 2) {
-                var role = "🏳Citizen";
+                var role = "🏳حيوان منوي";
             } else if (lvpoints <= 4) {
-                var role = "👼Baby Wizard";
+                var role = "👼طفل";
             } else if (lvpoints <= 6) {
-                var role = "🧙‍♀️Wizard";
+                var role = "🧙‍♀️ساحر";
             } else if (lvpoints <= 8) {
-                var role = "🧙‍♂️Wizard Lord";
+                var role = "🧙‍♂️كبير السحره";
             } else if (lvpoints <= 10) {
-                var role = "🧚🏻Baby Mage";
+                var role = "🧚🏻كاهن";
             } else if (lvpoints <= 12) {
-                var role = "🧜Mage";
+                var role = "🧜عظيم";
             } else if (lvpoints <= 14) {
                 var role = "🧜‍♂️Master of Mage";
             } else if (lvpoints <= 16) {
@@ -358,26 +358,26 @@ cmd({
                 pfp = await botpic();
             }
             const profile = `
-*Hii ${citel.pushName},*
-*Here is your profile information*
-*👤Username:* ${citel.pushName}
-*⚡Bio:* ${bioo}
-*🧩Role:* ${role}
-*🍁Level:* ${userq.level}
-*📥 Total Messages* ${ttms}
-*Powered by ${tlang().title}*
+*هلا ${citel.pushName},*
+*صفحــــة بروفـــايلك*
+*👤الأسم:* ${citel.pushName}
+*⚡البايو:* ${bioo}
+*🧩رولي:* ${role}
+*🍁المرحله:* ${userq.level}
+*📥 عدد الرسائل* ${ttms}
+*صنع بواسطه ${tlang().title}*
 `;
             const buttonsd = [{
                     buttonId: `${prefix}rank`,
                     buttonText: {
-                        displayText: "Rank",
+                        displayText: "رانك",
                     },
                     type: 1,
                 },
                 {
                     buttonId: `${prefix}help`,
                     buttonText: {
-                        displayText: " Help",
+                        displayText: "اوامر",
                     },
                     type: 1,
                 },
@@ -399,7 +399,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "rank",
+            pattern: "رانك",
             desc: "Sends rank card of user.",
             category: "group",
             filename: __filename,
@@ -459,11 +459,11 @@ cmd({
             }
             let disc = citel.sender.substring(3, 7);
             let textr = '';
-            textr += `*Hii ${tlang().greet} ,🌟 ${citel.pushName}∆${disc}'s* Exp\n\n`;
+            textr += `*هلا ${citel.pushName}`;
             let ttms = `${userq.xp}` / 8;
-            textr += `*🌟Role*: ${role}\n*🟢Exp*: ${userq.xp} / ${Levels.xpFor(
+            textr += `*⚡البايو:* ${bioo}\n*🟢يكسب*: ${userq.xp} / ${Levels.xpFor(
     userq.level + 1
-  )}\n*🏡Level*: ${userq.level}\n*Total Messages:*- ${ttms}`;
+  )}\n*🏡المستوى*: ${userq.level}\n*عدد الرسائل:*- ${ttms}`;
             try {
                 ppuser = await Void.profilePictureUrl(citel.sender, "image");
             } catch {
@@ -479,7 +479,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "leaderboard",
+            pattern: "المتصدرين",
             alias: ["deck"],
             desc: "To check leaderboard",
             category: "general",
@@ -489,7 +489,7 @@ cmd({
             const fetchlb = await Levels.fetchLeaderboard("RandomXP", 5);
             let leadtext = `
 *-------------------------------*
-*----● LeaderBoard ● -----*
+*----● قائمة المتصدرين ● -----*
 *-------------------------------*
 \n\n`
             for (let i = 0; i < fetchlb.length; i++) {
@@ -547,7 +547,7 @@ cmd({
                 let data = await sck1.findOne({ id: fetchlb[i].userID })
                 let namew = fetchlb[i].userID
                 let ttms = fetchlb[i].xp / 8
-                leadtext += `*${i + 1}●Name*: ${data.name}\n*●Level*: ${fetchlb[i].level}\n*●Points*: ${fetchlb[i].xp}\n*●Role*: ${role}\n*●Total messages*: ${ttms}\n\n`;
+                leadtext += `*${i + 1}●الأسم*: ${data.name}\n*●المستوى*: ${fetchlb[i].level}\n*●نقاطه*: ${fetchlb[i].xp}\n*●رولي*: ${role}\n*●عدد رسائله*: ${ttms}\n\n`;
             }
             return citel.reply(leadtext)
         }
@@ -627,7 +627,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "group",
+            pattern: "قروب",
             desc: "mute and unmute group.",
             category: "group",
             filename: __filename,
@@ -653,25 +653,25 @@ cmd({
                 let buttons = [{
                         buttonId: `${prefix}group open`,
                         buttonText: {
-                            displayText: "📍Unmute",
+                            displayText: "📍فتح",
                         },
                         type: 1,
                     },
                     {
                         buttonId: `${prefix}group close`,
                         buttonText: {
-                            displayText: "📍Mute",
+                            displayText: "📍غلق",
                         },
                         type: 1,
                     },
                 ];
-                await Void.sendButtonText(citel.chat, buttons, `Group Mode`, Void.user.name, citel);
+                await Void.sendButtonText(citel.chat, buttons, `وضع القروب`, Void.user.name, citel);
             }
         }
     )
     //---------------------------------------------------------------------------
 cmd({
-            pattern: "grouppic",
+            pattern: "خالقروب",
             desc: "Sets a profile pic in Group..",
             category: "group",
             filename: __filename,
@@ -863,9 +863,9 @@ cmd({
             teskd += `*There are total ${h.length}  warnings.*\n`
             for (let i = 0; i < h.length; i++) {
                 teskd += `*${i+1}*\n╭─────────────◆\n│ *🍁In Group:-* ${h[i].group}\n`
-                teskd += `│ *🔰Time:-* ${h[i].date}\n`
-                teskd += `│ *⚠️Warned by:-* ${h[i].warnedby}\n`
-                teskd += `│ _📍Reason: ${h[i].reason}_\n╰─────────────◆\n\n`
+                teskd += `│ *🔰الوقت:-* ${h[i].date}\n`
+                teskd += `│ *⚠️صاحب الانذار:-* ${h[i].warnedby}\n`
+                teskd += `│ _📍ريسون: ${h[i].reason}_\n╰─────────────◆\n\n`
             }
             citel.reply(teskd)
         }
@@ -892,7 +892,7 @@ cmd({
     )
     //---------------------------------------------------------------------------
 cmd({
-        pattern: "broadcast",
+        pattern: "brodcast",
         alias: ["bc"],
         desc: "Bot makes a broadcast in all groups",
         fromMe: true,
@@ -1007,13 +1007,13 @@ cmd({ on: "text" }, async(Void, citel) => {
                 },
                 caption: `
 ╔════◇
-║ *Wow,Someone just*
-║ *leveled Up huh⭐*
-║ *👤Name*: ${citel.pushName}
-║ *🎐Level*: ${sck1.level}🍭
-║ *🛑Exp*: ${sck1.xp} / ${Levels.xpFor(sck1.level + 1)}
-║ *📍Role*: *${role}*
-║ *Enjoy🥳*
+║ *واو لقد ارتفع مستواك*
+║ *ارتفاع ملحوظ ههه⭐*
+║ *👤الأسم*: ${citel.pushName}
+║ *🎐المستوى*: ${sck1.level}🍭
+║ *🛑يكسب*: ${sck1.xp} / ${Levels.xpFor(sck1.level + 1)}
+║ *📍رولي*: *${role}*
+║ *تمتع🥳*
 ╚════════════╝
 `,
             }, {

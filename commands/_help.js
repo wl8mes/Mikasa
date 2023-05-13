@@ -52,7 +52,7 @@ Secktor.cmd({
                     .locale('id')
                 const date = moment.tz('asia/karachi').format('DD/MM/YYYY')
                 let total = await sck1.countDocuments()
-                let str = `*⺀اوامر بوت زيرو تو⺀*
+                let str = `*⺀اوامر بوت تيمون⺀*
 ❀╎.بروفايل
 *┇↜⟬ يجيبلك تفاصيلك ⟭*
 ❀╎.رانك
@@ -92,7 +92,7 @@ Secktor.cmd({
 ❀╎.اختصار
 *┇↜⟬ يختصر رابطك ⟭*
 ✯───｢الدعم｣────✯
-｢  https://chat.whatsapp.com/LAASmxox5c75HILkYXe2AX  ｣
+｢  https://chat.whatsapp.com/CLELmSuuVZaHSq1lOjmXhB  ｣
 ✯──｢منوعات｣───✯
 ❀╎.تطقيم
 *┇↜⟬ يجلبلك تطقيمات ⟭*

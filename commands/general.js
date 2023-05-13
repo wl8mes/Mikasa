@@ -55,13 +55,7 @@ cmd({
     },
     async(Void, citel) => {
         let { data } = await axios.get('https://api.github.com/repos/SamPandey001/Secktor-Md')
-        let cap = `Hey ${citel.pushName}\n
-*⭐ Total Stars:* ${data.stargazers_count} stars
-*🍽️ Forks:* ${data.forks_count} forks
-*🍁 Repo:* secktorbot.tech/repo
-*Group:* secktorbot.tech/support
-*Deploy Your Own:*-
- SecktorBot.tech/youtube`
+        let cap = `هاهاهتهت`
         let buttonMessaged = {
             image: { url: await botpic() },
             caption: cap,
@@ -69,8 +63,8 @@ cmd({
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: "Secktor-Repo",
-                    body: "Easy to Use",
+                    title: "نعمم",
+                    body: "🗿",
                     thumbnail: log0,
                     mediaType: 4,
                     mediaUrl: '',
@@ -96,7 +90,7 @@ cmd({
         const uptime = process.uptime();
         timestampe = speed();
         latensie = speed() - timestampe;
-        let ter = `*⺀اوامر بوت زيرو رو⺀*
+        let ter = `*⺀اوامر بوت تيمون⺀*
 ❀╎.بروفايل
 *┇↜⟬ يجيبلك تفاصيلك ⟭*
 ❀╎.رانك
@@ -136,7 +130,7 @@ cmd({
 ❀╎.اختصار
 *┇↜⟬ يختصر رابطك ⟭*
 ✯───｢الدعم｣────✯
-｢  https://chat.whatsapp.com/LAASmxox5c75HILkYXe2AX  ｣
+｢  https://chat.whatsapp.com/CLELmSuuVZaHSq1lOjmXhB  ｣
 ✯──｢منوعات｣───✯
 ❀╎.تطقيم
 *┇↜⟬ يجلبلك تطقيمات ⟭*
@@ -191,8 +185,8 @@ cmd({
             headerType: 4,
             contextInfo: {
                 externalAdReply: {
-                    title: tlang().title,
-                    body: `Bot-Status`,
+                    title: تيمون,
+                    body: `تيمون`,
                     thumbnail: log0,
                     mediaType: 2,
                     mediaUrl: ``,

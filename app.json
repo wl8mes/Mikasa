@@ -1,18 +1,18 @@
 {
   "name": "RAIZEL-Md By RAIZEL GEORJE",
   "description": "A Whatsapp md bot built in NodeJs to make experience better\n\t if Any Problem : https://chat.whatsapp.com/EZe0MlgU0xo8GXtkCpqS0M",
-  "logo": "https://telegra.ph/file/eab1513c262f8b276a2c5.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "ZERO-TWO", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device"],
+  "logo": "https://telegra.ph/file/5fa44c1eee82661750fd5.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "( تـيـمـون )", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
   "description": "Name of Bot Owner",
-      "value": "رايزل جورج"
+      "value": "( تـيـمـون )"
   },
   "ALIVE_MESSAGE": {
     "description": "Alive message for bot",
-     "value": "•.•:•.•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•:•\n مرحبا بك في بوت رايزل \n•.•:•.•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•:•\n\n* لعرض الاوامر اكتب .اوامر* \n*صنع بواسطة:رايزل جورج*\nالمطور : wa.me/967770500831 \n الدعم: https://chat.whatsapp.com/EZe0MlgU0xo8GXtkCpqS0M",
+     "value": "•.•:•.•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•:•\n مرحبا بك في بوت ( تـيـمـون ) \n•.•:•.•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•:•\n\n* لعرض الاوامر اكتب .اوامر* \n*صنع بواسطة:( تـيـمـون ) *\nالمطور : wa.me/967770500831 \n الدعم: https://chat.whatsapp.com/CLELmSuuVZaHSq1lOjmXhB",
      "required" :false
     },
    "THUMB_IMAGE": {
@@ -55,7 +55,7 @@
   },
   "OWNER_NUMBER": {
     "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
-       "value": "967770500831"
+       "value": "96891103640"
   },
    "SESSION_ID": {
     "description": "Please put your SESSION_ID here,if you don't have visit\nhttps://replit.com/@SuhailTechInfo/Secktor-Md "
@@ -76,7 +76,7 @@
   },
     "THEME": {
     "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "RAIZEL"
+     "value": "( تـيـمـون )"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
@@ -89,7 +89,7 @@
   },
   "PACK_INFO": {
     "description": "Put packname;authorname.",
-     "value": "; 𝐑𝐀𝐈𝐙𝐄𝐋_𝐁𝐎𝐓_𝐄𝐎𝐑𝐉𝐄⃤/+967770500831",
+     "value": ";( تـيـمـون )",
      "required": false 
   }
 },

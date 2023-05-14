@@ -13,7 +13,7 @@
 ---
 1. ***عمل [سكانـQr](https://replit.com/@SuhailTechInfo/Secktor-Md?v=1) | [`SESSION-ID`](https://secktoruserbot.onrender.com/) تصوير الكود. `واتساب>المزيد>الاجهزه المرتبطه`***
 2.  ***عمل [`فورك`](https://github.com/Raizel-2023/Raizel_v3/fork)***
-3.  ***التنصيب [`على هيريكو`]( https://dashboard.heroku.com/new?template=https://github.com/Raizel-2023/Raizel-md)***
+3.  ***التنصيب [`على هيريكو`]( https://dashboard.heroku.com/new?template=https://github.com/Mikasa665/Mikasa)***
 ##
 
 

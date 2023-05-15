@@ -160,7 +160,7 @@ Secktor.cmd({
             const { commands } = require('../lib');
             let str = `
 ╭━━〘 ` +fancytext('𝚉𝚎𝚛𝚘-𝚝𝚠𝚘-MD', 58)+ ` 〙━━──⊷`
-            str += '' + `*⺀دعم قروب زيرو تو نورتونا⺀* \n* https://chat.whatsapp.com/LAASmxox5c75HILkYXe2AX *`
+            str += '' + `*⺀دعم قروب تيمون نورتونا⺀* \n* https://chat.whatsapp.com/CLELmSuuVZaHSq1lOjmXhB *`
             return Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str ,footer: tlang().footer, headerType: 4 })
         }
     )

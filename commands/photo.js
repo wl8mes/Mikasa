@@ -1,5 +1,6 @@
 const axios = require('axios')
 const { cmd } = require('../lib')
+const Secktor = require('../lib/commands')
 
      //---------------------------------------------------------------------------
 
@@ -186,7 +187,7 @@ const { cmd } = require('../lib')
         // Add more image URLs as needed
       ];
       
-      cmd({
+      Secktor.cmd({
         pattern: 'احزر',
       }, async(Void, citel, text) => {
         const randomIndex = Math.floor(Math.random() * images.length);
@@ -213,7 +214,7 @@ const stickers = [
   "https://raw.githubusercontent.com/akida-15/akida/master/sticker/6.webp"
 ];
 
-cmd({
+Secktor.cmd({
   pattern: 'نرد',
 }, async (Void, citel, text) => {
   const randomIndex = Math.floor(Math.random() * stickers.length);
